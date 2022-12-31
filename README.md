@@ -14,6 +14,9 @@
 > - **[Microsoft Edge](https://www.microsoft.com/en-us/edge?exp=e501&form=MA13FJ)**
 
 
+> **[youtube showcase](https://www.youtube.com/watch?v=p3b5E6xKjRI)**
+
+
 ### Info
 
 **Project to show how to implement some media attributes and visualizations on a website using mostly css and html.**
