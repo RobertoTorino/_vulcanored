@@ -21,6 +21,7 @@ body {
     margin: 0;
     font-family: 'Raleway', sans-serif;
     font-size: 17px;
+    user-select: none;
 }
 
 .content {
