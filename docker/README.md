@@ -6,10 +6,13 @@ I used an [alpine](https://www.alpinelinux.org/) image here because of its small
 using them in production environments. Most heard drawback are the DNS resolver issues. These issues are due to a bug in musl.
 
 **Configuration of your Docker file, it uses a very small Alpine Linux image.**
-**Place Docker.file in root of your project with this content:**                
+**Place a Docker.file in root of your project with this content (off course you can adjust everything to your own settings):**
 
 ```
 FROM docker.io/library/alpine:latest
+LABEL "copyright"="&copy 2023 Philip aka RobertoTorino"
+LABEL version="1.0"
+LABEL description="vulcanored"
 COPY . /etc/nginx/html
 EXPOSE 80/tcp
 RUN apk update && apk add nginx && apk add nano && mkdir -p /run/nginx && apk add curl shadow bind-tools tcpdump
@@ -48,7 +51,7 @@ run app:
 http://127.0.0.1/
 ```
 
-### Possible errors when running Docker and their solutions
+### Some common errors when running Docker and their solutions
 
 _Error: pull access denied repository does not exist or may require docker login._                                     
 To prevent this error, run docker build with -f <Dockerfile                                    

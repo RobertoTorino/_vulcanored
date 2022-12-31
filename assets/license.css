@@ -36,7 +36,6 @@ p {
     font-size: 18px;
 }
 
-
 body {
     display: flex;
     font-family: 'Raleway', sans-serif;
@@ -243,4 +242,3 @@ a.tooltip span {
     font-weight: bolder;
     cursor: pointer;
 }
-

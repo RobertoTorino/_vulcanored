@@ -20,18 +20,19 @@
 ### Info
 
 **Project to show how to implement some media attributes and visualizations on a website using mostly css and html.**
+**Also, a brief explanation on how to build a docker container for this static website and run this locally.**
 
-### Page One (index-vulcano.html) main elements
+### Page One (index.html) main elements
 
 - Entry page with dedicated favicon.
-- Continuous scrolling gradient colors from light red to deep black.
+- Continuous scrolling gradient colors from light to dark.
 - Footer with copyright notice.
 - Embedded nature audio with almost hidden audio controls (on/off).
 - Clickable glowing circle, which acts as a gateway to the main portal.
 
-### Page Two (discover-vulcanored.html) main elements
+### Page Two (vulcanored.html) main elements
 
-- Portal page with dedicated favicon.
+- Start page with dedicated favicon.
 - Full screen video animation.
 - Auto start video
 - Looped video animation with basic controls, fullscreen, sound on/off, play, pause and download.
@@ -43,7 +44,7 @@
 
 - MIT License page with description.
 - Full screen gradient animation.
-- Embedded audio with audio controls (on/off).
+- Embedded audio with simple audio controls (on/off).
 - Transparent footer overlay with copyright and about info and social media icons with links to their respective main websites in a glowing circle.
 - Most links will open in a separate browser tab.
 
@@ -52,12 +53,12 @@
 > - **The favicon package was generated with [RealFaviconGenerator](https://realfavicongenerator.net/)**
 > - **Convert your image into a circular image here [Imageonline.co](https://crop-circle.imageonline.co/)**
 > - **To add audio to the video this was used [Online Converter](https://www.onlineconverter.com/add-audio-to-video)**
-> - **Quickly resize your picture [image resizer](https://imageresizer.com/)**
-> - **Content delivery service [cdnjs](https://cdnjs.com/)**
+> - **Quickly resize your pictures here [image resizer](https://imageresizer.com/)**
+> - **Content delivery service used [cdnjs](https://cdnjs.com/)**
 
 The css and html code used in this project should be self-explanatory and together with the keywords explained below the whole project should read like a book.
 
-### Indepth explanation of all logic used, the most straight forwarded are skipped, everything can be read at: [mozilla.org](https://developer.mozilla.org/en-US/)
+### Indepth explanation of all logic used, everything can be read inn detail at: [mozilla.org](https://developer.mozilla.org/en-US/)
 
 **html**                
 The html HTML element represents the root (top-level element) of an HTML document, so it is also referred to as the root element. All other elements must be descendants of this element.

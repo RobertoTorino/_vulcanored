@@ -8,6 +8,23 @@
     <meta http-equiv="content-Type" content="text/html; charset=iso-8859-1">
     <meta name="ocean" content="width=device-width, initial-scale=1">
 
+    <!--do not copy message-->
+    <script>
+        document.addEventListener('copy', function (e) {
+            e.clipboardData.setData('text/plain', 'copy not possible');
+            e.clipboardData.setData('text/html', 'copy not possible');
+            e.clipboardData.setData('text/uri-list', 'copy not possible');
+            e.clipboardData.setData('text/css', 'copy not possible');
+            e.clipboardData.setData('image/jpeg', 'copy not possible');
+            e.clipboardData.setData('image/png', 'copy not possible');
+            e.clipboardData.setData('text/javascript', 'copy not possible');
+            e.clipboardData.setData('video/mp4', 'copy not possible');
+            e.clipboardData.setData('audio/mpeg', 'copy not possible');
+            e.clipboardData.setData('audio/wav', 'copy not possible');
+            e.preventDefault();
+        });
+    </script>
+
     <!--favicons-->
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_package_vulcano/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_package_vulcano/favicon-32x32.png">
@@ -51,6 +68,7 @@
     <sound onclick="document.getElementsByTagName('audio')[0].pause();">off</sound>
     <audio controls autoplay loop hidden>
         <source src="assets/sounds/vulcano.wav" type="audio/wav">
+        your browser does not support audio
     </audio>
 </sound>
 <!--end audio controls-->
