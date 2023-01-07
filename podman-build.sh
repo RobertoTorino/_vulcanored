@@ -16,26 +16,26 @@ DATE=$(date +"%Y-%m-%dT%H:%M:%S")
 exec > >(tee -i logs/"$DATE"-image-build.log)
 exec 2>&1
 
-docker stop vulcanored_app
+podman stop vulcanored_app
 echo "container stopped"
 wait $process_id
 
-docker rm vulcanored_app
+podman rm vulcanored_app
 wait $process_id
 echo "container removed"
 
-docker rmi alpine
+podman rmi alpine
 wait $process_id
 
-docker rmi vulcanored
+podman rmi vulcanored
 wait $process_id
 echo "alpine images removed"
 
-docker build -t vulcanored:latest -f Dockerfile .
+podman build -f Dockerfile.pm --format docker -t vulcanored:latest .
 echo "new alpine image build"
 wait $process_id
 
-docker run -dt --name vulcanored_app -p 8888:80 vulcanored:latest
+podman run -dt --name vulcanored_app -p 8888:80 vulcanored:latest
 echo "running new container now"
 wait $process_id
 
