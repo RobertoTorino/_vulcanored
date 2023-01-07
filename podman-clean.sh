@@ -16,18 +16,18 @@ DATE=$(date +"%Y-%m-%dT%H:%M:%S")
 exec > >(tee -i logs/"$DATE"-image-build.log)
 exec 2>&1
 
-podman stop vulcanored_app
+podman stop vulcanored-pm-app
 echo "container stopped"
 wait $process_id
 
-podman rm vulcanored_app
+podman rm vulcanored-pm-app
 wait $process_id
 echo "container removed"
 
 podman rmi alpine
 wait $process_id
 
-podman rmi vulcanored
+podman rmi vulcanored-pm
 wait $process_id
 echo "alpine images removed"
 
