@@ -8,7 +8,7 @@ then
   mkdir -p "$DIR" && chmod -R 755 "$DIR"
 fi
 
-URL=$"http://localhost:8888"
+URL=$"http://localhost:8890"
 process_id=$!
 DATE=$(date +"%Y-%m-%dT%H:%M:%S")
 
@@ -35,7 +35,7 @@ docker build -t vulcanored:latest -f Dockerfile .
 echo "new alpine image build"
 wait $process_id
 
-docker run -dt --name vulcanored_app -p 8888:80 vulcanored:latest
+docker run -dt --name vulcanored_app -p 8890:80 vulcanored:latest
 echo "running new container now"
 wait $process_id
 
