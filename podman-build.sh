@@ -39,6 +39,10 @@ podman run -dt --name vulcanored-pm-app -p 8888:80 vulcanored-pm:latest
 echo "running new container now"
 wait $process_id
 
+podman start --all
+echo "starting all containers"
+wait $process_id
+
 echo "Exit status: $?"
 echo "all processes finished"
 
